@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsara Sanctuary | Luxury Yoga Retreat Thailand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'samsara-green': '#2C4A42',
+                        'samsara-gold': '#D4AF37',
+                        'samsara-sand': '#F5F2EA',
+                        'samsara-stone': '#E8E6E1',
+                        'samsara-dark': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1596122557608-59197c36d2c4?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .luxury-card:hover .card-overlay {
+            opacity: 1;
+        }
+        .luxury-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-samsara-dark bg-samsara-sand antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-3xl text-samsara-green font-semibold tracking-wide flex items-center gap-2">
+                        <i data-lucide="lotus" class="w-8 h-8 text-samsara-gold"></i>
+                        Samsara
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#experience" class="text-samsara-dark hover:text-samsara-green transition-colors text-sm uppercase tracking-widest">Experience</a>
+                    <a href="#villas" class="text-samsara-dark hover:text-samsara-green transition-colors text-sm uppercase tracking-widest">Villas</a>
+                    <a href="#retreats" class="text-samsara-dark hover:text-samsara-green transition-colors text-sm uppercase tracking-widest">Retreats</a>
+                    <a href="#wellness" class="text-samsara-dark hover:text-samsara-green transition-colors text-sm uppercase tracking-widest">Wellness</a>
+                    <a href="#contact" class="px-6 py-2 bg-samsara-green text-white font-medium hover:bg-samsara-dark transition-colors duration-300 shadow-md">Book Your Stay</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-samsara-dark hover:text-samsara-green focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#experience" class="block px-3 py-3 text-base font-medium text-samsara-dark hover:bg-samsara-sand hover:text-samsara-green">Experience</a>
+                <a href="#villas" class="block px-3 py-3 text-base font-medium text-samsara-dark hover:bg-samsara-sand hover:text-samsara-green">Villas</a>
+                <a href="#retreats" class="block px-3 py-3 text-base font-medium text-samsara-dark hover:bg-samsara-sand hover:text-samsara-green">Retreats</a>
+                <a href="#wellness" class="block px-3 py-3 text-base font-medium text-samsara-dark hover:bg-samsara-sand hover:text-samsara-green">Wellness</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium bg-samsara-green text-white mx-4 mt-4">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen hero-bg flex items-center justify-center text-center px-4">
+        <div class="relative z-10 max-w-4xl mx-auto space-y-6 fade-in-up" style="animation-delay: 0.2s;">
+            <p class="text-white/90 text-sm md:text-base uppercase tracking-[0.3em] font-medium mb-4">Koh Samui, Thailand</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-light leading-tight mb-6">
+                Rediscover <br/> <span class="italic text-samsara-gold">Your Rhythm</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                An exclusive sanctuary where luxury meets mindfulness. Immerse yourself in the healing powers of nature on the pristine shores of Thailand.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#retreats" class="px-8 py-4 bg-samsara-gold text-white min-w-[200px] hover:bg-white hover:text-samsara-green transition-all duration-300 uppercase tracking-widest text-xs font-semibold">Explore Retreats</a>
+                <button onclick="document.getElementById('video-modal').classList.remove('hidden')" class="px-8 py-4 border border-white text-white min-w-[200px] hover:bg-white hover:text-samsara-dark transition-all duration-300 uppercase tracking-widest text-xs font-semibold flex items-center justify-center gap-2">
+                    <i data-lucide="play" class="w-3 h-3 fill-current"></i> Watch Film
+                </button>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white opacity-70 hover:opacity-100 transition-opacity">
+                <i data-lucide="chevron-down" class="w-8 h-8"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 opacity-5 pointer-events-none">
+            <i data-lucide="flower-2" class="w-96 h-96 text-samsara-green"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-samsara-gold"></div>
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070&auto=format&fit=crop" alt="Yoga Session" class="w-full h-[600px] object-cover shadow-2xl filter brightness-95">
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-samsara-gold"></div>
+                    <div class="absolute bottom-10 -right-10 bg-white p-6 shadow-xl max-w-xs hidden md:block">
+                        <p class="font-serif text-2xl text-samsara-green italic">"A place where time stands still and the soul breathes."</p>
+                        <p class="mt-2 text-xs uppercase tracking-widest text-gray-500">— Travel & Leisure</p>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="h-px w-12 bg-samsara-gold"></div>
+                        <span class="uppercase tracking-widest text-samsara-gold text-sm font-semibold">Our Philosophy</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif text-samsara-green leading-tight">Ancient Wisdom,<br>Modern Luxury</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg font-light">
+                        At Samsara Sanctuary, we believe that true wellness lies in the balance between movement and stillness. Nestled between the jungle and the Andaman Sea, our retreat offers a secluded haven to disconnect from the noise of the world and reconnect with yourself.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed text-lg font-light">
+                        Our world-class instructors guide you through personalized yoga and meditation practices, while our holistic spa therapies rejuvenate your body. Every detail, from our organic farm-to-table cuisine to our sustainable architecture, is designed to nurture your wellbeing.
+                    </p>
+                    <a href="#experience" class="inline-flex items-center text-samsara-green hover:text-samsara-gold transition-colors font-medium border-b border-samsara-green hover:border-samsara-gold pb-1">
+                        Discover Our Story <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities / Experience Icons -->
+    <section id="experience" class="py-20 bg-samsara-stone">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif text-samsara-green mb-4">The Samsara Experience</h2>
+                <p class="text-gray-600 font-light">Curated elements designed to harmonize body, mind, and spirit.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:bg-samsara-green transition-colors duration-300">
+                        <i data-lucide="waves" class="w-8 h-8 text-samsara-green group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-2">Private Beach</h3>
+                    <p class="text-sm text-gray-500 px-4">Secluded white sands exclusively for our guests.</p>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:bg-samsara-green transition-colors duration-300">
+                        <i data-lucide="flower" class="w-8 h-8 text-samsara-green group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-2">Holistic Spa</h3>
+                    <p class="text-sm text-gray-500 px-4">Traditional Thai massages and herbal treatments.</p>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:bg-samsara-green transition-colors duration-300">
+                        <i data-lucide="utensils" class="w-8 h-8 text-samsara-green group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-2">Organic Dining</h3>
+                    <p class="text-sm text-gray-500 px-4">Farm-to-table plant-based culinary excellence.</p>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:bg-samsara-green transition-colors duration-300">
+                        <i data-lucide="sun" class="w-8 h-8 text-samsara-green group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-2">Sunrise Yoga</h3>
+                    <p class="text-sm text-gray-500 px-4">Daily guided sessions in our open-air pavilion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Villas Section -->
+    <section id="villas" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <span class="uppercase tracking-widest text-samsara-gold text-sm font-semibold mb-2 block">Accommodations</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-samsara-green">Sanctuaries of Sleep</h2>
+                </div>
+                <a href="#" class="hidden md:inline-block px-8 py-3 border border-samsara-green text-samsara-green hover:bg-samsara-green hover:text-white transition-colors uppercase tracking-widest text-xs font-semibold">View All Villas</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Villa Card 1 -->
+                <div class="group luxury-card relative overflow-hidden cursor-pointer">
+                    <div class="aspect-w-3 aspect-h-4 h-[500px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop" alt="Oceanfront Villa" class="w-full h-full object-cover transition-transform duration-700">
+                    </div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute bottom-0 left-0 p-8 text-white w-full">
+                        <h3 class="text-2xl font-serif mb-2">Oceanfront Pool Villa</h3>
+                        <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
+                            <p class="text-sm text-white/90 mb-4 font-light">180sqm • Private Infinity Pool • Direct Beach Access</p>
+                            <span class="underline decoration-samsara-gold underline-offset-4 text-sm uppercase tracking-wider">View Details</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Villa Card 2 -->
+                <div class="group luxury-card relative overflow-hidden cursor-pointer">
+                    <div class="aspect-w-3 aspect-h-4 h-[500px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1974&auto=format&fit=crop" alt="Jungle Treehouse" class="w-full h-full object-cover transition-transform duration-700">
+                    </div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute bottom-0 left-0 p-8 text-white w-full">
+                        <h3 class="text-2xl font-serif mb-2">Canopy Treehouse</h3>
+                        <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
+                            <p class="text-sm text-white/90 mb-4 font-light">120sqm • Panoramic Views • Outdoor Rain Shower</p>
+                            <span class="underline decoration-samsara-gold underline-offset-4 text-sm uppercase tracking-wider">View Details</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Villa Card 3 -->
+                <div class="group luxury-card relative overflow-hidden cursor-pointer">
+                    <div class="aspect-w-3 aspect-h-4 h-[500px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1613425669932-99c54d583056?q=80&w=1974&auto=format&fit=crop" alt="Garden Suite" class="w-full h-full object-cover transition-transform duration-700">
+                    </div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute bottom-0 left-0 p-8 text-white w-full">
+                        <h3 class="text-2xl font-serif mb-2">Zen Garden Suite</h3>
+                        <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
+                            <p class="text-sm text-white/90 mb-4 font-light">90sqm • Private Courtyard • Meditation Deck</p>
+                            <span class="underline decoration-samsara-gold underline-offset-4 text-sm uppercase tracking-wider">View Details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 text-center md:hidden">
+                <a href="#" class="inline-block px-8 py-3 border border-samsara-green text-samsara-green hover:bg-samsara-green hover:text-white transition-colors uppercase tracking-widest text-xs font-semibold">View All Villas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retreat Packages -->
+    <section id="retreats" class="py-24 bg-samsara-green text-white relative">
+         <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+            <img src="https://www.transparenttextures.com/patterns/linen.png" alt="texture" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                 <span class="uppercase tracking-widest text-samsara-gold text-sm font-semibold mb-2 block">Curated Journeys</span>
+                <h2 class="text-4xl md:text-5xl font-serif">Upcoming Retreats</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-samsara-dark">
+                <!-- Package 1 -->
+                <div class="bg-samsara-sand p-8 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-samsara-gold text-xs font-bold uppercase tracking-widest mb-4">5 Days</div>
+                    <h3 class="text-2xl font-serif text-samsara-green mb-4">Detox & Revive</h3>
+                    <p class="text-gray-600 font-light mb-6 text-sm leading-relaxed">A gentle introduction to cleansing through raw food nutrition, juice fasting, and supportive yoga therapies.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> Daily Spa Treatment</li>
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> Nutritional Consultation</li>
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> 2x Daily Yoga</li>
+                    </ul>
+                    <div class="flex justify-between items-end border-t border-gray-200 pt-6">
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase">Starting from</span>
+                            <p class="text-xl font-serif text-samsara-green">$1,850</p>
+                        </div>
+                        <a href="#" class="text-samsara-green hover:text-samsara-gold font-medium text-sm uppercase tracking-wide">Select</a>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bg-white p-8 transform md:-translate-y-4 shadow-xl hover:-translate-y-6 transition-transform duration-300 relative">
+                     <div class="absolute top-0 right-0 bg-samsara-gold text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">Popular</div>
+                    <div class="text-samsara-gold text-xs font-bold uppercase tracking-widest mb-4">7 Days</div>
+                    <h3 class="text-2xl font-serif text-samsara-green mb-4">Inner Silence</h3>
+                    <p class="text-gray-600 font-light mb-6 text-sm leading-relaxed">Deepen your meditation practice and find profound peace in our guided silent retreat program.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> Private Meditation Guide</li>
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> Chakra Balancing</li>
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> Sunset Boat Trip</li>
+                    </ul>
+                    <div class="flex justify-between items-end border-t border-gray-200 pt-6">
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase">Starting from</span>
+                            <p class="text-xl font-serif text-samsara-green">$2,450</p>
+                        </div>
+                        <a href="#" class="text-samsara-green hover:text-samsara-gold font-medium text-sm uppercase tracking-wide">Select</a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-samsara-sand p-8 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-samsara-gold text-xs font-bold uppercase tracking-widest mb-4">10 Days</div>
+                    <h3 class="text-2xl font-serif text-samsara-green mb-4">Total Transformation</h3>
+                    <p class="text-gray-600 font-light mb-6 text-sm leading-relaxed">The ultimate immersive experience combining fitness, wellness workshops, and cultural excursions.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> Full Board Organic Meals</li>
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> 4x Excursions</li>
+                        <li class="flex items-center text-sm text-gray-700"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-2"></i> Life Coaching Sessions</li>
+                    </ul>
+                    <div class="flex justify-between items-end border-t border-gray-200 pt-6">
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase">Starting from</span>
+                            <p class="text-xl font-serif text-samsara-green">$3,900</p>
+                        </div>
+                        <a href="#" class="text-samsara-green hover:text-samsara-gold font-medium text-sm uppercase tracking-wide">Select</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial with Parallax -->
+    <section class="py-32 relative bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <i data-lucide="quote" class="w-12 h-12 text-white/80 mx-auto mb-8"></i>
+            <h3 class="text-3xl md:text-5xl font-serif text-white italic leading-relaxed mb-8">
+                "I arrived exhausted and left feeling reborn. The attention to detail, the warmth of the staff, and the sheer beauty of the location are unmatched."
+            </h3>
+            <p class="text-white font-sans uppercase tracking-widest text-sm font-semibold">Sarah Jenkins, New York</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-samsara-dark text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <a href="#" class="font-serif text-3xl font-light tracking-wide flex items-center gap-2">
+                        <i data-lucide="lotus" class="w-6 h-6 text-samsara-gold"></i>
+                        Samsara
+                    </a>
+                    <p class="text-gray-400 font-light leading-relaxed text-sm">
+                        A luxury sanctuary for the soul in the heart of Thailand's pristine coast.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-samsara-gold transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-samsara-gold transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-samsara-gold transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-samsara-gold uppercase tracking-widest text-xs font-semibold mb-6">Discover</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-white transition-colors">Our Philosophy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Villas & Suites</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Wellness Programs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-samsara-gold uppercase tracking-widest text-xs font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-light">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-1 text-samsara-gold"></i>
+                            <span>108 Moo 3, Taling Ngam,<br>Koh Samui, Surat Thani 84140,<br>Thailand</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-samsara-gold"></i>
+                            <span>+66 77 999 888</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-samsara-gold"></i>
+                            <span>reservations@samsara.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-samsara-gold uppercase tracking-widest text-xs font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4 font-light">Subscribe to receive wellness tips and exclusive offers.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your Email Address" class="bg-white/10 border border-white/20 text-white px-4 py-2 text-sm focus:outline-none focus:border-samsara-gold transition-colors">
+                        <button class="bg-samsara-gold text-samsara-dark px-4 py-2 text-sm font-semibold uppercase tracking-wider hover:bg-white transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-light">
+                <p>&copy; 2024 Samsara Sanctuary. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal (Hidden by default) -->
+    <div id="video-modal" class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4">
+        <button onclick="document.getElementById('video-modal').classList.add('hidden')" class="absolute top-8 right-8 text-white hover:text-samsara-gold">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="w-full max-w-5xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl border border-white/20 relative">
+             <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white font-serif text-xl italic">Promotional Video Placeholder</p>
+             </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('h-24', 'h-20');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('h-20', 'h-24');
+            }
+        });
+
+        // Smooth scrolling for anchor links (polyfill for Safari/older browsers handled by css scroll-behavior, this is for offset handling if needed)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.add('hidden'); // Close mobile menu on click
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
