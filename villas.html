@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villas & Suites | Samsara Sanctuary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'samsara-green': '#2C4A42',
+                        'samsara-gold': '#D4AF37',
+                        'samsara-sand': '#F5F2EA',
+                        'samsara-stone': '#E8E6E1',
+                        'samsara-dark': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #2C4A42 0%, #1A1A1A 100%);
+        }
+        .luxury-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-samsara-dark bg-samsara-sand antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-3xl text-samsara-green font-semibold tracking-wide flex items-center gap-2">
+                        <i data-lucide="lotus" class="w-8 h-8 text-samsara-gold"></i>
+                        Samsara
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#experience" class="text-samsara-dark hover:text-samsara-green transition-colors text-sm uppercase tracking-widest">Experience</a>
+                    <a href="index.html#villas" class="text-samsara-dark hover:text-samsara-green transition-colors text-sm uppercase tracking-widest">Villas</a>
+                    <a href="index.html#retreats" class="text-samsara-dark hover:text-samsara-green transition-colors text-sm uppercase tracking-widest">Retreats</a>
+                    <a href="index.html#wellness" class="text-samsara-dark hover:text-samsara-green transition-colors text-sm uppercase tracking-widest">Wellness</a>
+                    <a href="index.html#contact" class="px-6 py-2 bg-samsara-green text-white font-medium hover:bg-samsara-dark transition-colors duration-300 shadow-md">Book Your Stay</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-samsara-dark hover:text-samsara-green focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="index.html#experience" class="block px-3 py-3 text-base font-medium text-samsara-dark hover:bg-samsara-sand hover:text-samsara-green">Experience</a>
+                <a href="index.html#villas" class="block px-3 py-3 text-base font-medium text-samsara-dark hover:bg-samsara-sand hover:text-samsara-green">Villas</a>
+                <a href="index.html#retreats" class="block px-3 py-3 text-base font-medium text-samsara-dark hover:bg-samsara-sand hover:text-samsara-green">Retreats</a>
+                <a href="index.html#wellness" class="block px-3 py-3 text-base font-medium text-samsara-dark hover:bg-samsara-sand hover:text-samsara-green">Wellness</a>
+                <a href="index.html#contact" class="block px-3 py-3 text-base font-medium bg-samsara-green text-white mx-4 mt-4">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative hero-bg mt-20 py-32 flex items-center justify-center text-center px-4">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-serif text-white font-light leading-tight mb-6">Villas & Suites</h1>
+            <p class="text-lg text-white/80 font-light">Architectural sanctuaries designed for ultimate comfort</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Oceanfront Villa -->
+            <div class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-px w-12 bg-samsara-gold"></div>
+                        <span class="uppercase tracking-widest text-samsara-gold text-sm font-semibold">Ultimate Luxury</span>
+                    </div>
+                    <h2 class="text-4xl font-serif text-samsara-green mb-6">Oceanfront Pool Villa</h2>
+                    <p class="text-gray-700 leading-relaxed font-light mb-6">
+                        Our flagship villas offer unparalleled oceanfront access with private infinity pools overlooking the Andaman Sea. Each 180-square-meter villa features contemporary design infused with Thai architecture, complete with an open-air pavilion, rainfall shower, and seamless indoor-outdoor living.
+                    </p>
+                    <div class="bg-samsara-stone p-6 mb-6">
+                        <h3 class="text-xl font-serif text-samsara-green mb-4">Amenities</h3>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Private Infinity Pool</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Direct Beach Access</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Full Kitchen & Wine Cellar</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> 24/7 Personal Concierge</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Spa Pavilion</li>
+                        </ul>
+                    </div>
+                    <p class="text-2xl font-serif text-samsara-green">From $1,200/night</p>
+                </div>
+                <div class="order-1 lg:order-2 h-96 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/infinity-pool.jpg" alt="Oceanfront Villa" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Canopy Treehouse -->
+            <div class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="h-96 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/hero-meditation.jpg" alt="Jungle Treehouse" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-px w-12 bg-samsara-gold"></div>
+                        <span class="uppercase tracking-widest text-samsara-gold text-sm font-semibold">Jungle Retreat</span>
+                    </div>
+                    <h2 class="text-4xl font-serif text-samsara-green mb-6">Canopy Treehouse</h2>
+                    <p class="text-gray-700 leading-relaxed font-light mb-6">
+                        Nestled among towering tropical trees, these 120-square-meter treehouses offer a unique connection to nature. Floor-to-ceiling windows frame panoramic jungle and ocean views, while the elevated outdoor rain shower and meditation deck create an immersive wellness experience.
+                    </p>
+                    <div class="bg-samsara-stone p-6 mb-6">
+                        <h3 class="text-xl font-serif text-samsara-green mb-4">Amenities</h3>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Panoramic Views</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Outdoor Rain Shower</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Meditation Deck</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Natural Wood Interior</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Personal Wellness Consultant</li>
+                        </ul>
+                    </div>
+                    <p class="text-2xl font-serif text-samsara-green">From $850/night</p>
+                </div>
+            </div>
+
+            <!-- Zen Garden Suite -->
+            <div class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-px w-12 bg-samsara-gold"></div>
+                        <span class="uppercase tracking-widest text-samsara-gold text-sm font-semibold">Serene Elegance</span>
+                    </div>
+                    <h2 class="text-4xl font-serif text-samsara-green mb-6">Zen Garden Suite</h2>
+                    <p class="text-gray-700 leading-relaxed font-light mb-6">
+                        Intimate and refined, our 90-square-meter garden suites feature private landscaped courtyards with Japanese-inspired meditation gardens. Each suite includes a soaking tub on the private deck, silk bedding, and a carefully curated collection of wellness amenities for personal retreat.
+                    </p>
+                    <div class="bg-samsara-stone p-6 mb-6">
+                        <h3 class="text-xl font-serif text-samsara-green mb-4">Amenities</h3>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Private Courtyard</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Meditation Deck</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Soaking Tub</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> Yoga Mats & Props</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-samsara-gold mr-3"></i> In-Suite Spa Services</li>
+                        </ul>
+                    </div>
+                    <p class="text-2xl font-serif text-samsara-green">From $650/night</p>
+                </div>
+                <div class="order-1 lg:order-2 h-96 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/zen-garden-suite.jpg" alt="Zen Garden Suite" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Booking Section -->
+            <div class="bg-samsara-green text-white p-12 rounded-lg text-center">
+                <h3 class="text-3xl font-serif mb-4">Ready to Book Your Sanctuary?</h3>
+                <p class="text-white/90 mb-8 font-light">Our reservations team is available to help you find the perfect accommodation for your retreat.</p>
+                <a href="index.html#contact" class="inline-block px-8 py-4 bg-samsara-gold text-samsara-dark font-semibold uppercase tracking-widest hover:bg-white transition-colors">Make a Reservation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-samsara-dark text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <a href="index.html" class="font-serif text-3xl font-light tracking-wide flex items-center gap-2">
+                        <i data-lucide="lotus" class="w-6 h-6 text-samsara-gold"></i>
+                        Samsara
+                    </a>
+                    <p class="text-gray-400 font-light leading-relaxed text-sm">
+                        A luxury sanctuary for the soul in the heart of Thailand's pristine coast.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-samsara-gold transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-samsara-gold transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-samsara-gold transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-samsara-gold uppercase tracking-widest text-xs font-semibold mb-6">Discover</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-light">
+                        <li><a href="philosophy.html" class="hover:text-white transition-colors">Our Philosophy</a></li>
+                        <li><a href="villas.html" class="hover:text-white transition-colors">Villas & Suites</a></li>
+                        <li><a href="wellness.html" class="hover:text-white transition-colors">Wellness Programs</a></li>
+                        <li><a href="sustainability.html" class="hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-samsara-gold uppercase tracking-widest text-xs font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-light">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-1 text-samsara-gold"></i>
+                            <span>108 Moo 3, Taling Ngam,<br>Koh Samui, Surat Thani 84140,<br>Thailand</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-samsara-gold"></i>
+                            <span>+66 77 999 888</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-samsara-gold"></i>
+                            <span>reservations@samsara.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-samsara-gold uppercase tracking-widest text-xs font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4 font-light">Subscribe to receive wellness tips and exclusive offers.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your Email Address" class="bg-white/10 border border-white/20 text-white px-4 py-2 text-sm focus:outline-none focus:border-samsara-gold transition-colors">
+                        <button class="bg-samsara-gold text-samsara-dark px-4 py-2 text-sm font-semibold uppercase tracking-wider hover:bg-white transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-light">
+                <p>&copy; 2024 Samsara Sanctuary. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('h-24', 'h-20');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('h-20', 'h-24');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.add('hidden');
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
